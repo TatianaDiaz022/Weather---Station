@@ -7,10 +7,12 @@ Developer: Tatiana Diaz
 
 #Import libraries 
 import serial
+import serial.tools.list_ports
 import time
+import detect_arduino_port import p
 
 #Arduino port
-arduino_port ='COM6'  
+arduino_port = p
 arduino_bau = 9600
 
 service = serial.Serial(
@@ -27,10 +29,9 @@ while True:
     
     if data:
         print(data)
-        #temperature, humidity =data.split(",")
-        
-        #print(f"Temperature:{temperature}°C")
-        #print(f"humidity:{humidity}%")    
+        temperature, humidity = data.split(",")
+        print(f"Temperature:{temperature}°C")
+        print(f"humidity:{humidity}%")    
     time.sleep(1)
     
     
