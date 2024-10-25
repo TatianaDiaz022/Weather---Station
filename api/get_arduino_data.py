@@ -32,6 +32,12 @@ while True:
         temperature, humidity = data.split(",")
         print(f"Temperature:{temperature}°C")
         print(f"humidity:{humidity}%")    
+        
+        #1. create a new model data called "test_data"
+        #Fidelds: id, temp, hum, created_at
+        #2. create method to insert data into test_data 
+        #3. update method. instert data whe detec chages in temp or hum 
+        
     time.sleep(1)
     
     
