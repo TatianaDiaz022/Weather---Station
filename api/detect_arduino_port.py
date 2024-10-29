@@ -1,4 +1,5 @@
 import serial.tools.list_ports
+import serial
 
 def get_arduino_port():
     ports = serial.tools.list_ports.comports()
